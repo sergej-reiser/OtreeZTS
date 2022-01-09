@@ -21,3 +21,9 @@ jobs:
       run: docker build . --file Dockerfile --tag sreiser/otree:latest
     - name: Docker Push
       run: docker push sreiser/otree:latest
+    - name: Azure WebHook POST Action
+      uses: muinmomin/webhook-action@v1.0.0
+      env:
+        WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
+      with:
+        url: $WEBHOOK_URL
