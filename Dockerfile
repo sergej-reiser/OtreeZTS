@@ -6,6 +6,6 @@ RUN ["chmod", "+x", "/opt/otree/startup.sh"]
 WORKDIR /opt/otree
 EXPOSE 80
 
-RUN cd /opt/otree && pip install -r requirements_base.txt
+RUN cd /opt/otree && pip install -r requirements_base.txt && yes y | otree resetdb
 
 ENTRYPOINT ["/opt/otree/startup.sh"]
