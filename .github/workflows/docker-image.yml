@@ -26,4 +26,4 @@ jobs:
       env:
         WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
       with:
-        url: $WEBHOOK_URL
+        url: https://$trading-simulation:vugqB1RXviA4qrjicRAGjMgKTofZEB4CuxiJiQrglaFkMBHxRd0ENHfWiRZP@trading-simulation.scm.azurewebsites.net/docker/hook
