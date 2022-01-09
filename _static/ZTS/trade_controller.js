@@ -10,6 +10,10 @@ var graph_buffer = js_vars.graph_buffer;
 
 // portfolio variables
 var data = js_vars.data;                            // data from timeseries file
+var datas = [js_vars.share1, js_vars.share2, js_vars.share3, js_vars.share4, js_vars.share5, js_vars.share6];
+var shares_array = [0, 0, 0, 0, 0, 0];
+var share_value_array = [0, 0, 0, 0, 0, 0];
+
 var cur_day = 0;                                    // current market day starts at 0
 var length = js_vars.length;                        // length of data
 var news = js_vars.news;                            // list of news that should be displayed
@@ -25,6 +29,8 @@ var pandl = 0.0;                                    // Profit & Loss
 var y_axis_offset = Math.min(1, 0.25 * data[0]);   // current length of y axis from center
 var trading_happened = false;
 var finished = false;
+var pause = false;
+var pause_button_label="Pause"
 
 /*------------------------------------------------------------------
 Function that simulates a day in the market:
@@ -35,8 +41,8 @@ Function that simulates a day in the market:
 
 // setup and first iteration
 var chart = init_chart();
-chart.yAxis[0].setExtremes(data[0] - y_axis_offset, data[0] + y_axis_offset);
-buy_half_shares();
+//chart.yAxis[0].setExtremes(data[0] - y_axis_offset, data[0] + y_axis_offset);
+//buy_half_shares();
 set_buy_sell_amounts();
 liveSend(get_trade_report('Start', data[0], 0));
 
@@ -66,19 +72,20 @@ var interval_func = setInterval(function () {
     //----------- start of current interval ----------
 
     else {
-        ++cur_day;
-        y = data[cur_day];
+        if (pause != true) {
+            ++cur_day;
+            for (let i = 0; i < datas.length; i++) {
+                y = datas[i][cur_day]
+                chart.series[i].addPoint([cur_day, y], true, false);
 
-        // update chart
-        update_y_axis(y);
-        chart.series[0].addPoint([cur_day, y], true, false);
+                $_(`table_pshares_${i}`).innerHTML = to_comma_seperated(shares_array[i]);
+                $_(`table_share_price_${i}`).innerHTML = y.toFixed(2);
+            }
 
-        // update views
-        $_('table_cash').innerHTML = to_comma_seperated(cash);
-        $_('table_shares').innerHTML = to_comma_seperated(shares);
-        update_portfolio();
-        $_('trade_price').innerHTML = data[cur_day].toFixed(2);
-        $_('trade_news').innerHTML = news[cur_day];
+            // update views
+            $_('cash_header').innerHTML = to_comma_seperated(cash);
+            update_portfolio();
+        }
     }
 
 }, refresh_rate);
@@ -108,30 +115,40 @@ function set_buy_sell_amounts() {
     var min = Math.min.apply(Math, data);
     var max_shares = (Math.ceil((cash/min) / 10) * 10);
     var button_m = Math.max(10, Math.ceil((max_shares/10) / 10) * 10);  // roughly 10 percent of current shares
-    $_('trade_btn_sell_m').innerHTML = "Sell " + button_m;
-    $_('trade_btn_sell_m').value = button_m;
-    $_('trade_btn_buy_m').innerHTML = "Buy " + button_m;
-    $_('trade_btn_buy_m').value = button_m;
+//    $_('trade_btn_sell_m').innerHTML = "Sell " + button_m;
+//    $_('trade_btn_sell_m').value = button_m;
+//    $_('trade_btn_buy_m').innerHTML = "Buy " + button_m;
+//    $_('trade_btn_buy_m').value = button_m;
 
     var button_l = Math.max(20, Math.ceil((max_shares/5) / 10) * 10)  // roughly 20 percent of current shares
-    $_('trade_btn_sell_l').innerHTML = "Sell " + button_l;
-    $_('trade_btn_sell_l').value = button_l;
-    $_('trade_btn_buy_l').innerHTML = "Buy " + button_l;
-    $_('trade_btn_buy_l').value = button_l;
+//    $_('trade_btn_sell_l').innerHTML = "Sell " + button_l;
+//    $_('trade_btn_sell_l').value = button_l;
+//    $_('trade_btn_buy_l').innerHTML = "Buy " + button_l;
+//    $_('trade_btn_buy_l').value = button_l;
 }
 
-function buy_shares(amount) {
-    amount = parseFloat(amount);
+function pause_sim() {
+    pause = !pause;
+    var buttonCaption = "⏸ Pause"
+    if (pause) {
+        buttonCaption = "▶ Play"
+    }
+
+    $_("pause_btn").innerHTML = buttonCaption
+}
+
+
+function buy_shares(i) {
+    amount = parseFloat($_(`trade_input_${i}`).value);
     if(cur_day > 0 && !finished) {
-        var cur_price = data[cur_day];
+        var cur_price = datas[i][cur_day];
         var cur_total = amount * cur_price;
         if(cur_total <= cash) {
             // We have enough cash to buy amount of shares
             cash -= cur_total;
-            shares += amount;
-            $_('table_cash').innerHTML = to_comma_seperated(cash);
-            $_('table_shares').innerHTML = to_comma_seperated(shares);
-            update_portfolio();
+            shares_array[i] += amount;
+            $_('cash_header').innerHTML = to_comma_seperated(cash);
+            $_(`table_pshares_${i}`).innerHTML = to_comma_seperated(shares_array[i]);
             trading_happened = true;
 
             // send report to server
@@ -142,9 +159,11 @@ function buy_shares(amount) {
             // We don't have enough cash, but buy as much as possible
             var available_amount = Math.floor(cash / cur_price);
             cash = 0;
-            shares += available_amount;
-            $_('table_cash').innerHTML = to_comma_seperated(cash);
-            $_('table_shares').innerHTML = to_comma_seperated(shares);
+            shares_array[i] += available_amount;
+            $_('cash_header').innerHTML = to_comma_seperated(cash);
+            $_(`table_pshares_${i}`).innerHTML = to_comma_seperated(shares_array[i]);
+            trading_happened = true;
+
             // send report to server
             liveSend(get_trade_report('Buy', cur_price, available_amount));
             toastr.success('Bought '+available_amount+' shares!');
@@ -153,22 +172,23 @@ function buy_shares(amount) {
             // We have no cash
             toastr.error('No money!');
         }
+
+        update_portfolio();
     }
 }
 
-function sell_shares(amount) {
-    amount = parseFloat(amount);
+function sell_shares(i) {
+    amount = parseFloat($_(`trade_input_${i}`).value);
     if(cur_day > 0 && !finished) {
-        var cur_price = data[cur_day];
-        var cur_shares = shares;
+        var cur_price = datas[i][cur_day];
+        var cur_shares = shares_array[i];
         var cur_total = amount * cur_price;
         if(amount <= cur_shares) {
             // we have enough shares to sell amount
             cash += cur_total;
-            shares -= amount;
-            $_('table_cash').innerHTML = to_comma_seperated(cash);
-            $_('table_shares').innerHTML = to_comma_seperated(shares);
-            update_portfolio();
+            shares_array[i] -= amount;
+            $_('cash_header').innerHTML = to_comma_seperated(cash);
+            $_(`table_pshares_${i}`).innerHTML = to_comma_seperated(shares_array[i]);
             trading_happened = true;
 
             // send report to server
@@ -178,10 +198,12 @@ function sell_shares(amount) {
          else if(cur_shares > 0) {
             // we don't have enough, but sell rest
             var available_amount = cur_shares;
-            shares = 0;
+            shares_array[i] = 0;
             cash += available_amount * cur_price;
-            $_('table_cash').innerHTML = to_comma_seperated(cash);
-            $_('table_shares').innerHTML = to_comma_seperated(shares);
+            $_('cash_header').innerHTML = to_comma_seperated(cash);
+            $_(`table_pshares_${i}`).innerHTML = to_comma_seperated(shares_array[i]);
+            trading_happened = true;
+
             // send report to server
             liveSend(get_trade_report('Sell', cur_price, -available_amount));
             toastr.success('Sold remaining '+available_amount+' shares!');
@@ -190,6 +212,7 @@ function sell_shares(amount) {
             // we have no shares left
             toastr.error('No Shares!');
         }
+        update_portfolio();
     }
 }
 
@@ -198,13 +221,16 @@ Portfolio Logic:
     - update portfolio
 ------------------------------------------------------------------*/
 function update_portfolio() {
-    share_value = shares * data[cur_day];
-    total = cash + share_value;
-    pandl = total - start_cash;
-    roi_percent = ((total/start_cash)*100) - 100;
-    $_('table_share_value').innerHTML = to_comma_seperated(share_value);
-    $_('table_total').innerHTML = to_comma_seperated(total);
-    $_('table_pandl').innerHTML = to_comma_seperated(pandl);
+    total_share_value = 0
+    for (let i = 0; i < datas.length; i++) {
+      share_value_array[i] = shares_array[i] * datas[i][cur_day]
+      total_share_value += share_value_array[i]
+      $_(`table_pshare_value_${i}`).innerHTML = to_comma_seperated(share_value_array[i]);
+    }
+
+    total = cash + total_share_value;
+    $_('total_header').innerHTML = to_comma_seperated(total);
+//    roi_percent = ((total/start_cash)*100) - 100;
 }
 
 /*------------------------------------------------------------------
@@ -212,13 +238,13 @@ Chart Logic:
     - update y axis min and max in chart if necessary
 ------------------------------------------------------------------*/
 function update_y_axis(y) {
-    var new_y_offset = Math.abs(y - data[0]) * (1 + graph_buffer);
-    if(new_y_offset > y_axis_offset) {
-        y_axis_offset = new_y_offset;
-        var y_axis_min = data[0] - y_axis_offset;
-        var y_axis_max = data[0] + y_axis_offset;
-        chart.yAxis[0].setExtremes(y_axis_min, y_axis_max);
-    }
+//    var new_y_offset = Math.abs(y - data[0]) * (1 + graph_buffer);
+//    if(new_y_offset > y_axis_offset) {
+//        y_axis_offset = new_y_offset;
+//        var y_axis_min = data[0] - y_axis_offset;
+//        var y_axis_max = data[0] + y_axis_offset;
+//        chart.yAxis[0].setExtremes(y_axis_min, y_axis_max);
+//    }
 }
 
 /*------------------------------------------------------------------

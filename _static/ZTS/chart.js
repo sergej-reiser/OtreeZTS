@@ -35,7 +35,7 @@ function init_chart() {
         series: {
             states: {
                 hover: {
-                    enabled: false
+                    enabled: true
                 }
             },
             marker: {
@@ -44,22 +44,34 @@ function init_chart() {
         }
     },
     legend: {
-        enabled: false,
+        enabled: true,
         layout: 'vertical',
         align: 'right',
         verticalAlign: 'top',
         borderWidth: 1
     },
     tooltip: {
-        animation:false,
-        enabled: false,
+        animation:true,
+        enabled: true,
     },
     series: [{
-        //name: 'Random data',
+        name: 'Share 1',
         data: [],
-        label: {
-    		enabled: false,
-		}
+    }, {
+        name: 'Share 2',
+        data: [],
+    }, {
+        name: 'Share 3',
+        data: [],
+    }, {
+        name: 'Share 4',
+        data: [],
+    }, {
+        name: 'Share 5',
+        data: [],
+    }, {
+        name: 'Share 6',
+        data: [],
     }],
     });
 return chart;
