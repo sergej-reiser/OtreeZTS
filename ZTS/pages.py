@@ -40,12 +40,12 @@ class TradingPage(Page):
             refresh_rate=self.session.config['refresh_rate'],
             graph_buffer=self.session.config['graph_buffer'],
             data=timeseries_df['AdjustedClose'].to_list(),
-            share1=timeseries_df['Share1'].to_list(),
-            share2=timeseries_df['Share2'].to_list(),
-            share3=timeseries_df['Share3'].to_list(),
-            share4=timeseries_df['Share4'].to_list(),
-            share5=timeseries_df['Share5'].to_list(),
-            share6=timeseries_df['Share6'].to_list(),
+            share1=timeseries_df['A'].to_list(),
+            share2=timeseries_df['B'].to_list(),
+            share3=timeseries_df['C'].to_list(),
+            share4=timeseries_df['D'].to_list(),
+            share5=timeseries_df['E'].to_list(),
+            share6=timeseries_df['F'].to_list(),
             length=timeseries_length,
             news=timeseries_news,
             cash=self.session.config['initial_cash'],
@@ -55,4 +55,4 @@ class ResultsPage(Page):
     def is_displayed(self):
         return self.round_number <= self.session.config['num_rounds']
 
-page_sequence = [InstructionPage, StartPage, TradingPage, ResultsPage]
+page_sequence = [InstructionPage, StartPage, TradingPage]

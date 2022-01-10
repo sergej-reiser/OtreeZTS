@@ -85,6 +85,7 @@ var interval_func = setInterval(function () {
             // update views
             $_('cash_header').innerHTML = to_comma_seperated(cash);
             update_portfolio();
+            pause_sim();
         }
     }
 
