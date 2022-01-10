@@ -1,20 +1,13 @@
-﻿Date,AdjustedClose,News,Share1,Share2,Share3,Share4,Share5,Share6
-12.10.93,280,,141.7,280,151.15,142.77,64.71,223.82
-13.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",141.79,280,151.25,143.37,1.33,173.33
-14.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",142.97,280,150.68,144.23,42.18,218.93
-15.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",144.09,280,145.56,145.19,48.38,128.82
-18.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",141.4,280,143.6,145.28,46.84,183.68
-19.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",141.22,280,143.47,145.15,64.53,169.32
-20.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",140.21,280,143.75,144.43,41.78,120.3
-21.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",141.85,280,141.76,144.21,5.9,156.43
-22.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",143.14,280,143.37,143.42,60.18,233.41
-25.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",144.27,280,145.05,145.06,14.21,233.47
-26.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",145.29,280,146.31,144.12,54.69,172.49
-27.10.93,280,"In order to achieve the best performance possible in the upcoming experimental round, pay attention to the instructions.",145.57,280,145.95,142.43,27.25,132
-28.10.93,280,,145.69,280,145.39,141.49,82.18,179.79
-29.10.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",145.36,280,144.24,142.79,76.43,145.64
-01.11.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",144.72,280,140.13,142.3,16.42,140.35
-02.11.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",146.35,280,142.24,142.19,73.53,156.11
-03.11.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",145.09,280,142.42,141.68,26.3,141.76
-04.11.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",143.26,280,144.45,141.34,72.83,203.08
-05.11.93,280,"In order to make trades, you can use the six buttons above to buy or sell different amounts of stock.",141.88,280,145.11,141.07,97.22,169.07
+﻿Date,A,B,C,D,E,F,AdjustedClose
+13.10.93,110,110,110,110,110,110,110
+17.10.93,113.15,81.45,126.25,101.4,101.4,90.88,113.5
+18.10.93,119.94,77.38,119.94,96.33,107.48,86.33,113.5
+19.10.93,127.13,82.02,113.94,91.51,102.11,91.51,119.9
+20.10.93,134.76,86.93,120.77,86.93,108.24,97,113.9
+21.10.93,142.85,92.16,114.74,82.59,102.82,92.15,1
+22.10.93,135.71,97.68,108.99,87.55,108.99,87.55,1
+25.10.93,143.85,92.8,103.55,92.8,115.54,83.17,1
+26.10.93,152.48,98.36,98.37,88.16,122.47,79.01,1
+27.10.93,144.85,104.27,93.45,83.75,116.34,83.74,1
+28.10.93,153.54,110.52,88.77,88.77,110.53,79.56,1
+29.10.93,162.75,117.15,84.34,94.08,105,75.58,1

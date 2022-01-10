@@ -6,7 +6,7 @@ function init_chart() {
     var chart = Highcharts.chart('container', {
 	chart: {
         type: 'line',
-        animation: false, // don't animate in old IE
+        animation: true, // don't animate in old IE
         marginRight: 10,
         events: {
             load: function () {
@@ -15,17 +15,17 @@ function init_chart() {
         }
     },
     title: {
-        text: 'Share Prices by Day'
+        text: 'Good Prices per Period'
     },
     yAxis: {
         title: {
-            text: 'Price [$]'
+            text: 'Price in €'
         },
         gridLineWidth: 1,
     },
     xAxis: {
     	title: {
-            text: 'Days'
+            text: 'Periods'
         },
         min: 0,
         max: length-1,
@@ -55,23 +55,29 @@ function init_chart() {
         enabled: true,
     },
     series: [{
-        name: 'Share 1',
+        name: 'A',
         data: [],
+        color: '#6610f2',
     }, {
-        name: 'Share 2',
+        name: 'B',
         data: [],
+        color: '#ffc107',
     }, {
-        name: 'Share 3',
+        name: 'C',
         data: [],
+        color: '#fd7e14',
     }, {
-        name: 'Share 4',
+        name: 'D',
         data: [],
+        color:'#17a2b8',
     }, {
-        name: 'Share 5',
+        name: 'E',
         data: [],
+        color:'#343a40',
     }, {
-        name: 'Share 6',
+        name: 'F',
         data: [],
+        color:'#dc3545',
     }],
     });
 return chart;

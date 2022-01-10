@@ -159,3 +159,369 @@ KeyError: 'Share2'
 2022-01-08 00:34:35,575 - c:\users\9i00029\appdata\local\programs\python\python37\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
 2022-01-08 00:35:24,912 - c:\users\9i00029\appdata\local\programs\python\python37\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/css/bootstrap.min.css.map
 2022-01-08 00:35:24,928 - c:\users\9i00029\appdata\local\programs\python\python37\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
+2022-01-08 13:55:23,997 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /nice ports,/Trinity.txt.bak
+2022-01-08 15:15:13,542 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:20,011 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:21,183 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:23,199 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:23,761 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:24,199 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 15:15:28,074 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/16mhwf2t/zts/TradingPage/7/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-08 16:19:24,310 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /config/getuser
+2022-01-09 13:52:37,865 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /boaform/admin/formLogin
+2022-01-09 14:09:53,018 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/m4e9i09v/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-09 14:10:31,793 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/05eslhpz/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Share1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 43, in js_vars
+    share1=timeseries_df['Share1'].to_list(),
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Share1'
+2022-01-09 14:19:18,178 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/tpgzjueo/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['AdjustedClose'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:20:20,918 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/tpgzjueo/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['A'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:20:26,458 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/50juazr62d/
+2022-01-09 14:20:29,751 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/50juazr62d/
+2022-01-09 14:20:40,259 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/qmfov90o/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['A'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:20:51,533 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/qmfov90o/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['A'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:20:52,455 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/qmfov90o/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['A'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:22:09,907 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Internal Server Error: /p/m4e9i09v/zts/TradingPage/3/
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'AdjustedClose'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\otree\views\abstract.py", line 235, in get_context_data
+    context['js_vars'] = self.js_vars()
+  File "C:\Users\otree\PycharmProjects\OtreeZTS\ZTS\pages.py", line 33, in js_vars
+    timeseries_points = timeseries_df['A'].to_list()
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'AdjustedClose'
+2022-01-09 14:32:39,900 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
+2022-01-09 14:32:40,025 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/css/bootstrap.min.css.map
+2022-01-09 14:39:43,146 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
+2022-01-09 14:39:43,172 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/css/bootstrap.min.css.map
+2022-01-09 14:39:50,728 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/css/bootstrap.min.css.map
+2022-01-09 14:39:50,736 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
+2022-01-09 14:40:19,538 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/css/bootstrap.min.css.map
+2022-01-09 14:40:19,570 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /static/bootstrap4/js/bootstrap.bundle.min.js.map
+2022-01-09 15:01:58,652 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /p/oycajqas/exitcodes/Checkout/397/www.google.de
+2022-01-09 15:02:16,869 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /p/oycajqas/exitcodes/Checkout/397/www.google.de
+2022-01-09 15:09:19,999 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/nydzs1kcfy/
+2022-01-09 17:26:48,191 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/xpk3lvdrmk/
+2022-01-09 17:30:08,087 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-09 17:52:35,288 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/5d1b4y7467/
+2022-01-09 17:54:36,150 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /join/5d1b4y7467/
+2022-01-09 17:56:54,957 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-09 18:00:02,680 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /config/getuser
+2022-01-09 18:12:00,380 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /.env
+2022-01-09 18:12:04,513 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Forbidden (CSRF cookie not set.): /
+2022-01-09 18:38:52,214 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /solr/admin/info/system
+2022-01-09 18:57:22,574 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /index.php
+2022-01-10 13:37:19,448 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-10 14:07:09,768 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-10 16:29:05,443 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /.env
+2022-01-10 16:29:06,114 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Forbidden (CSRF cookie not set.): /
+2022-01-10 17:01:26,443 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /console/
+2022-01-10 17:16:59,556 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /Autodiscover/Autodiscover.xml
+2022-01-10 17:53:07,565 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /_ignition/execute-solution
+2022-01-10 17:53:29,839 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /portal/redlion
+2022-01-10 19:10:19,716 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /actuator/health
+2022-01-10 21:51:32,282 - c:\users\otree\pycharmprojects\otreezts\venv\lib\site-packages\django\utils\log.py:228 - Not Found: /hudson
